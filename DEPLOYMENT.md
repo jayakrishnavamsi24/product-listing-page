@@ -1,6 +1,7 @@
 # Vercel Deployment Guide
 
 ## Prerequisites
+
 - Vercel account (free tier available)
 - GitHub repository with your code
 - Firebase project configured
@@ -8,6 +9,7 @@
 ## Deployment Steps
 
 ### 1. Install Vercel CLI (Optional)
+
 ```bash
 npm i -g vercel
 ```
@@ -26,7 +28,7 @@ npm i -g vercel
 
 3. **Configure Environment Variables:**
    Add these environment variables in Vercel dashboard:
-   
+
    ```
    VITE_FIREBASE_API_KEY=AIzaSyAnN9pZsFj3oM54I2PhgmNHvenD2e6ENWU
    VITE_FIREBASE_AUTH_DOMAIN=product-listing-page-56728.firebaseapp.com
@@ -46,6 +48,7 @@ npm i -g vercel
 ### 3. Deploy via CLI (Alternative)
 
 1. **Login to Vercel:**
+
    ```bash
    vercel login
    ```

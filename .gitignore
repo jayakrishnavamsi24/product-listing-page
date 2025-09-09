@@ -41,3 +41,4 @@ jest-test-results.json
 .firebase/
 firebase-debug.log
 .firebaserc
+.vercel
