@@ -1,0 +1,169 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  :root {
+    /* Global Text Colors */
+    --text-primary: #000000;
+    --text-secondary: #252020;
+    --text-muted: #878691;
+    --text-light: #bec7cd;
+    --text-accent: #eb4c6b;
+    --text-white: #ffffff;
+
+    /* Global Background Colors */
+    --bg-primary: #ffffff;
+    --bg-dark: #000000;
+    --bg-overlay: #00000075;
+    --bg-overlay-light: #ffffff7f;
+    --bg-brand: #006fcf;
+    --bg-purple: #5a31f4;
+
+    /* Global Border Colors */
+    --border-dark: #4c4c4c;
+    --border-light: #e5e5e5;
+    --border-pink: #fff2f5;
+    --border-white: #ffffff75;
+
+    /* Component-specific Colors */
+    --header-bg: var(--bg-primary);
+    --footer-bg: var(--bg-dark);
+    --button-bg: var(--bg-primary);
+    --button-bg-overlay: var(--bg-overlay);
+    --input-bg: var(--bg-primary);
+    --card-bg: var(--bg-primary);
+
+    /* Typography Variables */
+    --font-size-xs: 12px;
+    --font-size-sm: 14px;
+    --font-size-base: 16px;
+    --font-size-lg: 18px;
+    --font-size-xl: 20px;
+    --font-size-2xl: 22px;
+    --font-size-3xl: 24px;
+    --font-size-4xl: 36px;
+    --font-size-5xl: 60px;
+
+    /* Font Weight Variables */
+    --font-weight-normal: 400;
+    --font-weight-medium: 500;
+    --font-weight-bold: 700;
+    --font-weight-extrabold: 800;
+
+    /* Line Height Variables */
+    --line-height-tight: 15px;
+    --line-height-snug: 17px;
+    --line-height-normal: 20px;
+    --line-height-relaxed: 22px;
+    --line-height-loose: 24px;
+    --line-height-xl: 30px;
+    --line-height-2xl: 44px;
+    --line-height-3xl: 72px;
+
+    /* Spacing Variables */
+    --spacing-xs: 4px;
+    --spacing-sm: 8px;
+    --spacing-md: 12px;
+    --spacing-lg: 16px;
+    --spacing-xl: 20px;
+    --spacing-2xl: 24px;
+    --spacing-3xl: 36px;
+    --spacing-4xl: 48px;
+    --spacing-5xl: 56px;
+
+    /* Border Radius Variables */
+    --radius-sm: 5px;
+    --radius-md: 12px;
+
+    /* Layout Variables */
+    --width-sidebar: 20%;
+    --width-main: 74%;
+    --width-half: 50%;
+  }
+}
+
+@layer utilities {
+  /* Line clamp utilities */
+  .line-clamp-1 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 1;
+  }
+
+  .line-clamp-2 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 2;
+  }
+
+  .line-clamp-3 {
+    overflow: hidden;
+    display: -webkit-box;
+    -webkit-box-orient: vertical;
+    -webkit-line-clamp: 3;
+  }
+
+  /* Custom animations */
+  .animate-fade-in {
+    animation: fadeIn 0.3s ease-in-out;
+  }
+
+  .animate-slide-up {
+    animation: slideUp 0.3s ease-out;
+  }
+
+  .animate-scale-in {
+    animation: scaleIn 0.2s ease-out;
+  }
+
+  /* Focus ring utility */
+  .focus-ring {
+    @apply focus:outline-none focus:ring-2 focus:ring-blue-500 focus:ring-offset-2;
+  }
+
+  /* Smooth hover transitions */
+  .hover-lift {
+    transition:
+      transform 0.2s ease-in-out,
+      box-shadow 0.2s ease-in-out;
+  }
+
+  .hover-lift:hover {
+    transform: translateY(-2px);
+    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.1);
+  }
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+@keyframes slideUp {
+  from {
+    transform: translateY(10px);
+    opacity: 0;
+  }
+  to {
+    transform: translateY(0);
+    opacity: 1;
+  }
+}
+
+@keyframes scaleIn {
+  from {
+    transform: scale(0.95);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
