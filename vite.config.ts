@@ -5,7 +5,7 @@ import tagger from "@dhiwise/component-tagger";
 // https://vitejs.dev/config/
 export default defineConfig({
   build: {
-    outDir: "build",
+    outDir: "dist",
   },
   plugins: [react(),tagger()],
   resolve: {
@@ -19,9 +19,8 @@ export default defineConfig({
     },
   },
   server: {
-    port: "4028",
+    port: 4028,
     host: "0.0.0.0",
-    strictPort: true,
-    allowedHosts: ['.amazonaws.com', '.builtwithrocket.new']
+    strictPort: true
   }
 });
